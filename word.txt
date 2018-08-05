@@ -1,0 +1,153 @@
+vocabulary
+
+this course is about lerninng javaScript depply.
+
+"understending the weird parts"
+
+
+CONCEPTUAL ASIDE
+
+
+- SYNATAX PARSERS 
+A program that read your code and determines what is does and if its grammer is valid
+(from javaScrips to machine code)
+
+- EXECUTION CONTEXTS
+A wrapper to help manage the code that is running
+
+- LEXIXAL ENVIRONMENTS
+Where something sits physically in the code you write
+
+- NAME / VALUE PAIRS AND OBJECT
+A name which maps to unique value
+
+address = '100 street'
+
+name : address , value '100 street'
+
+- OBJECT 
+A collection of name value pairs
+
+name :
+        name : 
+                name: value
+                name: value
+                name : name : value
+                name : name : value ...
+                
+Address : {
+    Street: 'main',
+    Number: 100,
+    Apartment:{
+        Floor: 3,
+        Number: 301
+    }
+}
+
+it's just thet simple
+
+
+- THE GLOBAL ENVIRONMENT AND THE GLOBAL OBJECT
+
+Global = Not inside a Function.
+
+* Execution Context (GLobal)
+    - Create global object - the object is window in browser
+    - Create 'this' = window
+    
+when we create function and variable and they not inside function they are attach to window object
+
+- THE EXECUTION CONTEXTS CREATING AND HOISTING
+
+1) setup the memoty space
+2) assing the variable
+
+undefiend != not defined
+
+- SINGLE THREADED
+One command at time
+
+- SYNCHRONOUS
+One at a time
+
+- FUNCTION INVOCATION AND THE EXECUTION STACK
+* INVOCATION = running a function
+
+
+- THE SCOPE CHAIN
+
+function b(){
+    console.log(myVar);
+}
+
+function a(){
+    var myVar = 2;
+    function c(){
+        console.log(myVar);
+    }
+    c();
+    b();
+}
+
+var myVar = 1;
+console.log(myVar);
+a();
+
+// 1
+// 2
+// 1
+
+scope chain
+
+-FUNCTION CONTEXTS AND VARIABLE ENVIRONMENT
+* VARIABLE ENVIRONMENT = where variable lives;
+
+- SCOPE ,ES6 , AND LET
+
+*SCOPE = where a variable is available in your code
+*ES6   = 
+*let   =
+
+if(a > b){
+ let c = true;
+}
+
+
+- ASYNCHRONOUS = more thet one at time
+
+- Event queue
+
+// long running function
+function waitThreeSeconds(){
+    var ms = 3000 + new Date().getTime();
+    while(new Date() < ms){}
+    console.log('finished function');
+}
+
+function clickHandler(){
+    console.log('Click Event');
+}
+
+document.getElementById('btn').addEventListener('click', function(){
+    console.log('btn clickd');
+})
+
+document.addEventListener('click' , clickHandler);
+
+waitThreeSeconds();
+console.log('finished Execution');
+
+- TYPE AND JAVASCRIP
+* DYNAMIC TYPING = you don't tell the engine what type of data a variable holds figures it out while your code is rumming
+
+- PRIMITICE TYPES = a type of data that represents a single value
+
+* undefined
+* null
+* boolean
+* Number = floating point
+* String
+* symbol
+
+- COERCION = covert a value to another type
+
