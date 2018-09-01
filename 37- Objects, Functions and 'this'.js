@@ -41,7 +41,7 @@ var c = {
         this.name = 'update c object'
         console.log(this);
         function f(){
-            console.log(this);
+            console.log(this);  //this pointed-> global object
         }
         f();
     }
@@ -56,7 +56,7 @@ var ce = {
         this.name = 'update ce object'
         console.log(this);
         function f(){
-            console.log(self);
+            console.log(self);   //this pointed-> current object this
         }
         f();
     }
@@ -64,6 +64,11 @@ var ce = {
 
 
 ce.log();
+
+// execution context
+// environment variable
+// creation of this keyword
+// add the function to exection stack
 
 function self(){
     

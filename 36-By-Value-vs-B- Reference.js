@@ -43,8 +43,8 @@ console.log(c);
 console.log(d);
 
 // equals operator sets new memory space (new address)
-c = {greeting : 'howdy'};
-console.log(c);
+c = {greeting : 'howdy'}; // new value  
+console.log(c); 
 console.log(d);
 
 
